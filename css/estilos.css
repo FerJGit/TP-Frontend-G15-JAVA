@@ -10,6 +10,11 @@
     --rojo: #CF0A0A;
     --naranja:  #DC5F00;
     --gris : #EEEEEE;
+    --blanco: white;
+}
+
+body {
+    background-color: var(--gris);
 }
 
 .header{
@@ -19,6 +24,7 @@
 section{
     background-color: var(--gris);
 }
+
 
 /* ----- Logo -----*/
 #logo{
@@ -37,6 +43,7 @@ section{
 #logo:hover{
     filter: contrast(95%) brightness(95%);
 }
+
 
 /*----- Menu -----*/
 nav ul{
@@ -63,6 +70,7 @@ nav ul{
     cursor: pointer;
     border: 2px var(--negro) solid;
 }
+
 
 /*----- Footer -----*/
 .footer{
@@ -105,10 +113,11 @@ nav ul{
     color: var(--gris);
 }
 
+
 /*----- Acerca -----*/
 #grupo15{
-    width: 12vw;
-    margin-left: 20vw;
+    width: 18vw;
+    margin-left: 37vw;
     border: 2px var(--rojo) solid;
     text-align: center;
     padding: 1%;
@@ -116,7 +125,82 @@ nav ul{
 #grupo15 ul{
     list-style-type: none;
 }
+#grupo15_mensaje{
+    text-align: center;
+}
 
+
+/* ---- Formulario de carga de datos -------*/
+.input_out{
+    /*background-color: #fd6f02;*/
+    background-color: var(--gris);
+}
+
+form {
+    background-color: var(--naranja);
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    align-items: center;
+    padding:2vh;
+    text-align: center;
+    width: 30%;
+    margin-left: 33vw;
+    border-radius: 15px;
+}
+
+form h2 {
+    font-size: 2.2rem;
+    color: var(--negro);
+    margin-bottom: 3.5vh;
+}
+
+input {
+    padding: 2vh;
+    border-radius: 150px;
+    background-color: var(--blanco);
+    border: 2px solid var(--naranja);
+    margin-bottom: 3.5vh;
+    outline: false;
+    color: var(--negro);
+    font-size: 1rem;
+    width: 65%;
+    accent-color: var(--negro);
+}
+
+.input_componentes{
+    font-size: 1.15rem;    
+    font-weight: 54;
+}
+
+.input_nacim{
+    margin-top: 2vh;
+    width: 30%;
+}
+
+.input_pais{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    width: 60%;
+    margin-left: -40px;
+    height: 3.2vw;
+}
+
+.btn {
+    margin-top: 7%;
+    background-color: var(--negro);
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--gris);
+    color: var(--negro);
+    cursor: pointer;
+}
+/*---------------------------------------*/
+
+
+/* --- Autos ---*/
 .auto-container {
     display: flex;
     justify-content: space-around;
@@ -159,5 +243,4 @@ nav ul{
     min-height: auto; 
     margin-left: 10em;
     margin-right: 10em;
-
 }

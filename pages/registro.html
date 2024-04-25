@@ -21,33 +21,33 @@
     </header>
 
     <main>
-        <section>
-            <body>
-    
-                <form>
+        <section class="input_out">
+            <form>
             
                     <h2>Registro</h2>
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Apellido">
-                    <input type="email"placeholder="Correo">
-                    <input type="password"placeholder="Contraseña">
-                    <input type="password"placeholder="Confirmar Contraseña">
-                    <label for="Fecha de Nacimiento">Fecha de Nacimiento
-                        <input type="date"plahoceholder="Fecha de Nacimiento">
-            
-                    </label>
+                    <input type="text" placeholder="Nombre" title="Ingresa tu nombre" required maxlength="50">
+                    <input type="text" placeholder="Apellido" title="Ingresa tu apellido" required maxlength="50">
+                    <input type="email" placeholder="Correo" title="Ingresa tu dirección de correo" required maxlength="100">
+                    <input type="password" placeholder="Contraseña" title="Escribe la contraseña que deseas utilizar para el acceso a nuestra web" required maxlength="50">
+                    <input type="password" placeholder="Confirmar Contraseña" title="Repite la contraseña que deseas utilizar para el acceso a nuestra web" required maxlength="50">
+                    <br>
+                    <div class="input_componentes">
+                        <label for="Fecha de Nacimiento">Fecha de Nacimiento
+                            <br>
+                            <input type="date" title="Ingresa la fecha en la que naciste en formato dd/mm/aaaa" class="input_nacim">
+                        </label>
                     
-                    <label for="Pais">Pais de Origen:
-                        <input type="radio" name="Pais" id="Pais" value:1>Argentina
-                        <input type="radio" name="Pais" id="Pais" value:1>Otro Pais
-            
-                    </label>
-                    <input type="submit"class="btn"value="Enviar">
-            
-                    
-                </form>
-            </body>
-                      
+                        <p>País de Origen</p>
+                        <br>
+                        <label class="input_pais">
+                            <input type="radio" name="Pais" value:1 checked>Argentina
+                            <input type="radio" name="Pais" value:2>Otro
+                        </label>
+                    </div>
+
+                    <input type="submit" class="btn" value="Enviar">
+                   
+            </form>         
         </section>
     </main>
 
@@ -74,8 +74,6 @@
         <p class="footer_p">Copyright 2024&copy;</p>
         <br>
     </footer>
-
-
     
 </body>
 </html>

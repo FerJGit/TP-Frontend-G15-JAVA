@@ -91,7 +91,7 @@ nav ul{
 #footer_direccion img{
     margin-left: 3%;
     margin-top: 2%;
-    width: 0.6vw;
+    width: 0.75vw;
     cursor: pointer;
 }
 
@@ -132,14 +132,11 @@ nav ul{
 
 /* ---- Formulario de carga de datos -------*/
 .input_out{
-    /*background-color: #fd6f02;*/
     background-color: var(--gris);
 }
 
 form {
     background-color: var(--naranja);
-    /*display: flex;*/
-    /*flex-direction: column;*/
     align-items: center;
     padding:2vh;
     text-align: center;
@@ -201,17 +198,33 @@ input {
 
 
 /* --- Autos ---*/
-.auto-container {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 1%;
-    
+.animate__animated.animate__lightSpeedInLeft {
+    --animate-duration: 3.5s;
+}
+.animate__animated.animate__flash {
+    --animate-duration: 5s;
 }
 
+.auto-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 6%;
+}
+.auto-container a{
+    text-decoration: none;
+    color: var(--negro);
+}
 .auto-img {
     width: 300px;
     height: 200px;
+    border-radius: 15px;
+    border: 3px solid var(--negro);
+}
+
+.auto-img:hover{
+    border: 3px solid var(--rojo);
+    box-shadow: 3px 3px var(--naranja);
 }
 
 .auto-img2 {
@@ -219,6 +232,8 @@ input {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 15px;
+    border: 2px solid var(--negro);
 }
 
 .auto-name {
@@ -234,13 +249,20 @@ input {
 
 .auto-des {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #EEEEEE;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: auto; 
     margin-left: 10em;
     margin-right: 10em;
+}
+
+.auto-caract{
+    margin-left: 2.5%;
+}
+
+.auto-caract p{
+    margin-left: -1%;
+}
+
+.auto-des-lista{
+    list-style-type:square;
 }

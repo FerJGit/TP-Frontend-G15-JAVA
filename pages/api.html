@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="icon" href="../img/Logo.ico" type="image/x-icon">
-    <title>Autos-Detalle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>     
+    <title>API</title>
 </head>
 <body>
     <header class="header">
@@ -16,35 +17,48 @@
                 <li><a class="menu_nav" href="autos.html">Autos</a></li>
                 <li><a class="menu_nav" href="registro.html">Registro</a></li>
                 <li><a class="menu_nav" href="acerca.html">Acerca de Nosotros</a></li>
-                <li><a class="menu_nav" href="api.html">API</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            <br>
-            <h1>Ferrari F430</h1>
-            <br>
-            <img class="auto-img2"  src="../img/Autos/Ferrari430.jpg" alt="Ferrari 430">
-            <br>
-            <p class="auto-des">El Ferrari F430 es un automóvil deportivo biplaza producido por el fabricante italiano Ferrari desde 2004 hasta 2009. Es una versión mejorada del Ferrari 360 Modena, con un motor central-trasero V8 a 90° de 4308 cm³ (4,3 L) y tracción trasera. Está disponible en carrocerías cupé y descapotable (F430 Spider), presentados en 2004 y 2006 respectivamente1.</p>
-            <br>
-            <br>
-            <div class="auto-caract">
-                <p><strong>Características destacadas del Ferrari F430:</strong></p>
-                <ul class="auto-des-lista">
-                    <li>Motor: V8 a 90° F136 E atmosférico de 4308 cm³ (4,3 L).</li>
-                    <li>Potencia: 490 a 510 CV (483 a 503 HP).</li>
-                    <li>Par motor: 47,4 a 48 kg·m (465 a 471 N·m).</li>
-                    <li>Velocidad máxima: 315 km/h (196 mph) para el F430 y 320 km/h (199 mph) para el 430 Scuderia.</li>
-                    <li>Aceleración: 0-100 km/h en 4,0 segundos para el F430; 3,6 segundos para el 430 Scuderia.</li>
-                    <li>Transmisión: Manual o semiautomática F1, ambas de 6 marchas.</li>
-                    <li>Su diseño aerodinámico no solo proporciona un aspecto visual impresionante, sino que también mejora la eficiencia y el manejo a altas velocidades2. Además, cuenta con tecnologías avanzadas inspiradas en la división de competición de Ferrari Gestione Sportiva F1</li>
-                </ul>
-            </div>
-            <br>
-            <br>
+
+            <script>
+                // obtener datos de la API y mostrarlos
+                function fetchAPIData() {
+                    var script = document.createElement('script');
+                    script.src = 'https://www.carqueryapi.com/api/0.3/?callback=displayData&cmd=getMakes';
+                    document.body.appendChild(script);
+                }
+            
+                // datos obtenidos de la API
+                function displayData(data) {
+                    var apiDataContainer = document.getElementById('api-data');
+                    apiDataContainer.innerHTML = '';
+            
+                    var numberOfItemsToShow = 9;
+            
+                    data.Makes.slice(0, numberOfItemsToShow).forEach(make => {
+                        let itemElement = document.createElement('div');
+                        itemElement.className = 'api-item';
+                        itemElement.innerHTML = `
+                            <h4>${make.make_display}</h4>
+                            <p>País : ${make.make_country}</p>
+                            <br>
+                        `;
+                        apiDataContainer.appendChild(itemElement);
+                    });
+                }
+            
+                document.addEventListener('DOMContentLoaded', fetchAPIData);
+            </script>
+            
+            <section class="api-section">
+                <h2>Marcas de Autos (tomados desde API : https://www.carqueryapi.com)</h2>
+                <div id="api-data" class="api-data">
+                </div>
+            </section>
         </section>
     </main>
 
@@ -71,6 +85,6 @@
         <p class="footer_p">Copyright 2024&copy;</p>
         <br>
     </footer>
-    
+
 </body>
 </html>

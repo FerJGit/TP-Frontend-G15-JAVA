@@ -62,6 +62,7 @@ nav ul{
     border-radius: 10px;
     padding: 1vh 1vw;
     text-decoration: none;
+    border: 2px solid transparent;
 }
 
 .menu_nav:hover{
@@ -83,7 +84,7 @@ nav ul{
     color:  var(--blanco);
     padding: 5vh;  
     width: 20%;
-    height: 15%;
+    height: 16%;
     position: absolute;
     top: 40vh;
     left: 35vw;
@@ -97,20 +98,18 @@ nav ul{
     width: 25%;
     border-radius: 15px;
     float: left;
-    margin-left: 2vw;
+    margin-left: 1vw;
+    display: flex;
 }
 
 .transparent-box h2{
-    float: right;
-    margin-top: 8%;
-    margin-right: 9%;
+    margin-top: 6%;
     color: var(--rojo);
     text-shadow: 5px 5px var(--negro)
 }
-.transparent-box h4{
-    float: left;
-    margin-left: 10%;
-    margin-top: 5%;
+.transparent-box h5{
+    margin-left: 3%;
+    margin-top: 7%;
     text-shadow: 5px 5px var(--negro)
 }
 /* ------------------------------------*/
@@ -172,6 +171,36 @@ nav ul{
     text-align: center;
 }
 
+/* --- Login ---*/
+.login-form-group{
+    height: 25vh;
+    margin-top: 2vh;
+}
+#login-inputUser{
+    width: 65%;
+    margin-top: 6%;
+    margin-left: 5%;
+}
+#login-inputPass{
+    width: 65%;
+    margin-left: 5%;
+}
+.login-boton{
+    background-color: var(--negro);
+    color: var(--gris);
+    border-radius: 10px;
+    border: none;
+    width: 10vw;
+    height: 6vh;
+    margin-bottom: 4%;
+    border: 2px solid transparent;
+}
+.login-boton:hover{
+    background-color: var(--gris);
+    color: var(--negro);
+    cursor: pointer;
+    border: 2px var(--negro) solid;
+}
 
 /* ---- Formulario de carga de datos -------*/
 .input_out{
@@ -230,12 +259,14 @@ input {
     background-color: var(--negro);
     color: var(--blanco);
     cursor: pointer;
+    border: 2px solid transparent;
 }
 
 .btn:hover {
     background-color: var(--gris);
     color: var(--negro);
     cursor: pointer;
+    border: 2px solid var(--negro);
 }
 /*---------------------------------------*/
 

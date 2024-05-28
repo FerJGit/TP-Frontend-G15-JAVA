@@ -3,7 +3,7 @@ var numberOfItemsToShow = 9;
 // obtener datos de la API y mostrarlos
 function fetchAPIData() {
     let script = document.createElement('script');
-    script.src = 'https://www.carqueryapi.com/api/0.3/?callback=displayData&cmd=getMakes';
+    script.src = 'https://www.carqueryapi.com/api/0.3/?callback=displayData&cmd=getMakes&sold_in_us=1';
     document.body.appendChild(script);
 }
 

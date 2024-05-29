@@ -6,7 +6,7 @@ const cambioFondo = () => {
     contador ++;
     if(contador>3)
         contador = 1;
-    fondo_img.src = "img/Fondo" + contador.toString() + "_blur.jpg";
+    fondo_img.src = "./img/Fondo" + contador.toString() + "_blur.jpg";
 }
 
 const intervalID = setInterval(cambioFondo, 7000);

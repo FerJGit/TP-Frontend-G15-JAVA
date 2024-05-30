@@ -15,4 +15,4 @@ Formulario de registro con validaciones.
 Login hardcodeado.
 Consumo de API de autos.
 
-Por ahora todo HTML y CSS
+Todo con HTML, CSS y JS

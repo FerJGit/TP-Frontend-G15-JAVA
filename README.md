@@ -9,8 +9,10 @@ Es un sitio de autos.
 Tiene logo y favicon generados. 
 Animaciones.
 Sombras.
-Formulario de registro.
 Links a redes sociales.
 iframe con localización (maps) de dirección de oficina.
+Formulario de registro con validaciones.
+Login hardcodeado.
+Consumo de API de autos.
 
 Por ahora todo HTML y CSS

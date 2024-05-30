@@ -173,17 +173,26 @@ nav ul{
 
 /* --- Login ---*/
 .login-form-group{
-    height: 25vh;
+    height: 35vh;
     margin-top: 2vh;
+    background-color: var(--naranja);
+    align-items: center;
+    padding:2vh;
+    text-align: center;
+    width: 30%;
+    margin-left: 34vw;
+    border-radius: 15px;
+    font-size: 1rem;
 }
-#login-inputUser{
+.login-form-group input{
     width: 65%;
     margin-top: 6%;
     margin-left: 5%;
-}
-#login-inputPass{
-    width: 65%;
-    margin-left: 5%;
+    border-radius: 150px;
+    border: 2px solid var(--naranja);
+    margin-bottom: 1vh;
+    font-size: 2.2vh;
+    padding: 1%;
 }
 .login-boton{
     background-color: var(--negro);
@@ -202,12 +211,13 @@ nav ul{
     border: 2px var(--negro) solid;
 }
 
-/* ---- Formulario de carga de datos -------*/
+
+/* ---- Registro (formulario de carga de datos) -------*/
 .input_out{
     background-color: var(--gris);
 }
 
-form {
+.input_out form {
     background-color: var(--naranja);
     align-items: center;
     padding:2vh;
@@ -217,21 +227,21 @@ form {
     border-radius: 15px;
 }
 
-form h2 {
+.input_out form h2 {
     font-size: 2.2rem;
     color: var(--negro);
     margin-bottom: 3.5vh;
 }
 
-input {
-    padding: 2vh;
+.input_out input {
+    padding: 1vh;
     border-radius: 150px;
     background-color: var(--blanco);
     border: 2px solid var(--naranja);
-    margin-bottom: 3.5vh;
+    margin-bottom: 1vh;
     outline: false;
     color: var(--negro);
-    font-size: 1rem;
+    font-size: 0.8rem;
     width: 65%;
     accent-color: var(--negro);
 }
@@ -246,20 +256,42 @@ input {
     width: 30%;
 }
 
-.input_pais{
-    display: inline-flex;
-    flex-wrap: nowrap;
-    width: 60%;
-    margin-left: -40px;
-    height: 3.2vw;
+.input_out select{
+    border-radius: 0.7rem;
+    color: var(--negro);
+    background-color: var(--blanco);
+    padding: 1vh;
+    border-radius: 150px;
+    width: 65%;
+    border: 2px solid var(--naranja);
+    margin-bottom: 1vh;
+    outline: false;
+    color: var(--negro);
+    font-size: 0.8rem;
+}
+
+#check {
+    accent-color: var(--naranja);
+    width: 1vw;
+    height: 2vh;
+    margin-top: 2.5%;
+}
+
+.input_out label{
+    color: var(--blanco);
+    font-size: 1.2rem;
 }
 
 .btn {
-    margin-top: 7%;
+    margin-top: 5%;
+    margin-bottom: 2%;
     background-color: var(--negro);
     color: var(--blanco);
     cursor: pointer;
     border: 2px solid transparent;
+    width: 15vw;
+    height: 5vh;
+    border-radius: 15px;
 }
 
 .btn:hover {
@@ -268,6 +300,11 @@ input {
     cursor: pointer;
     border: 2px solid var(--negro);
 }
+
+.input_out a {
+    text-decoration: none;
+}
+
 /*---------------------------------------*/
 
 
@@ -355,12 +392,19 @@ input {
     border-radius: 10px;
     padding: 0.2%;
 }
+#api-cant-items label{
+    color: var(--negro);
+    font-size: 1.2rem;
+    margin-bottom: 1%;
+}
 #api_citems{
     width: 3.5%;
-    height: 0.2vh;
+    height: 3vh;
+    background-color: #facaa6;
     color: var(--negro);
     border-radius: 15px;
     text-align: center;
+    font-weight: bold;
 }
 #api-cant-items{
     display: flex;

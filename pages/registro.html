@@ -15,8 +15,8 @@
             <ul>
                 <li><a class="menu_nav" href="../index.html">Inicio</a></li>
                 <li><a class="menu_nav" href="./autos.html">Autos</a></li>
-                <li><a class="menu_nav" href="./registro.html">Registro</a></li>
                 <li><a class="menu_nav" href="./acerca.html">Acerca de Nosotros</a></li>
+                <li><a class="menu_nav" href="./registro.html">Registro</a></li>
                 <li><a class="menu_nav" href="./api.html">API</a></li>
             </ul>
         </nav>
@@ -26,28 +26,37 @@
         <section class="input_out">
             <form>
                 <h2 class="animate__animated animate__pulse animate__infinite infinite">Registro</h2>
-                <input type="text" placeholder="Nombre" title="Ingresa tu nombre" required maxlength="50">
-                <input type="text" placeholder="Apellido" title="Ingresa tu apellido" required maxlength="50">
-                <input type="email" placeholder="Correo" title="Ingresa tu dirección de correo" required maxlength="100">
-                <input type="password" placeholder="Contraseña" title="Escribe la contraseña que deseas utilizar para el acceso a nuestra web" required maxlength="50">
-                <input type="password" placeholder="Confirmar Contraseña" title="Repite la contraseña que deseas utilizar para el acceso a nuestra web" required maxlength="50">
+                <input name="nombre" id="nombre" type="text" placeholder="Nombre" title="Ingresa tu nombre" maxlength="50">
+                <input name="apellido" id="apellido" type="text" placeholder="Apellido" title="Ingresa tu apellido" maxlength="50">
+                <input name="mail" id="mail" type="email" placeholder="Correo Electrónico" title="Ingresa tu dirección de correo" maxlength="100">
+                <input name="psw" id="psw" type="password" placeholder="Contraseña" title="Escribe la contraseña que deseas utilizar para el acceso a nuestra web" maxlength="50">
+                <input name="psw2" id="psw2" type="password" placeholder="Confirmar Contraseña" title="Repite la contraseña que deseas utilizar para el acceso a nuestra web" maxlength="50">
                 <br>
                 <div class="input_componentes">
-                    <label for="Fecha de Nacimiento">Fecha de Nacimiento
-                        <br>
-                        <input type="date" title="Ingresa la fecha en la que naciste en formato dd/mm/aaaa" class="input_nacim">
-                    </label>
-                
-                    <p>País de Origen</p>
+                    <input type="text" name="fechaNac" id="fechaNac" placeholder="F.Nacimiento (dd/mm/aaaa)" 
+                    onfocus="(this.type='date')" onblur="(this.type='text')">
                     <br>
-                    <label class="input_pais">
-                        <input type="radio" name="Pais" value:1 checked>Argentina
-                        <input type="radio" name="Pais" value:2>Otro
-                    </label>
+                    <select name="pais" id="pais">
+                        <option value="" disabled selected hidden>Seleccionar País...</option>
+                        <option value="arg">Argentina</option>
+                        <option value="bol">Bolivia</option>
+                        <option value="bra">Brasil</option>
+                        <option value="chi">Chile</option>
+                        <option value="col">Colombia</option>
+                        <option value="ecu">Ecuador</option>
+                        <option value="par">Paraguay</option>
+                        <option value="per">Perú</option>
+                        <option value="uru">Uruguay</option>
+                        <option value="ven">Venezuela</option>
+                    </select>
                 </div>
-
-                <input type="submit" class="btn" value="Enviar">
-                   
+                <input type="number" name="dni" id="dni" placeholder="DNI">
+                <input type="number" name="telefono" id="telefono" placeholder="Teléfono">
+                <br>
+                <input type="checkbox" name="check" id="check">
+                <label for="">Acepto términos y condiciones</label>
+                <br>
+                <button type="button" class="btn btn-danger btn-lg" onclick="ValidarMostrar()">Registrarse</button>
             </form>         
         </section>
     </main>
@@ -76,5 +85,7 @@
         <br>
     </footer>
     
+    <script src="../js/registro.js"></script>
+
 </body>
 </html>
